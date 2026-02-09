@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://manufacturing-backend.onrender.com"
+
 
 st.set_page_config(page_title="Manufacturing App", layout="centered")
 
