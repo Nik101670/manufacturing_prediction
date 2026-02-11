@@ -1,14 +1,12 @@
 import streamlit as st
 import requests
+import os
 
-API_URL = "https://manufacturing-backend.onrender.com"
-
+API_URL = os.getenv("API_URL", "https://manufacturing-api-z7yd.onrender.com")
 
 st.set_page_config(page_title="Manufacturing App", layout="centered")
-
 st.title("🏭 Manufacturing Prediction App")
 
-# Get features from API
 try:
     features = requests.get(f"{API_URL}/features").json()["feature_columns"]
 except:
@@ -16,7 +14,6 @@ except:
     st.stop()
 
 st.write("Fill feature values below:")
-
 user_data = {}
 
 for feat in features:
