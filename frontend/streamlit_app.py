@@ -1,11 +1,11 @@
 import streamlit as st
 import requests
 import os
-
-API_URL = os.getenv("API_URL", "https://manufacturing-api-z7yd.onrender.com")
+# "https://manufacturing-api-z7yd.onrender.com"
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="Manufacturing App", layout="centered")
-st.title("🏭 Manufacturing Prediction App")
+st.title(" Manufacturing Prediction App")
 
 # -----------------------------
 # Fetch feature columns from API
